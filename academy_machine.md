@@ -1,11 +1,11 @@
-This machine is one of the first machines i got root access to. It was really fun and this is going to be like a walkthrough o it.
-Advice to beginners just like me, I won't advise you follow this walkthrough back to back as it will really not help you progress well in your journey. You can just come here to check when you get stuck and have tried all possible things you know before.
+This machine is one of the first machines i got root access to. It was really fun and this is going to be like a walkthrough to it.
+Advice to beginners just like me, I won't advise you follow this walkthrough back to back as it will rnot really help you progress well in your journey. You can just come here to check when you get stuck and have tried all possible things you know before.
 
 First we load our machine and get our IP address. For that we use the command <ip a> and we copy our IP address. That will be the target IP. 
 ![image](https://github.com/Bangis041/academy-/assets/74382096/9c438e88-5791-4089-83fe-921446e9cc60)
 
 
-We start by doing the normal, scanning for ports to see which ports are opened and vulnerable. For this, I did <nmap -A -p- IP>
+We start by doing the normal, scanning for ports to see which ports are opened and vulnerable. For this, I did a nmap scan with SYNTAX: <nmap -A -p- IP>
 ![image](https://github.com/Bangis041/academy-/assets/74382096/3d764b7f-820c-41d3-b1d1-34811b658b62)
 
 From the scan above, we can see we had a number of opened ports. Port 21, 22 and 80. Port 21 looked interesting since it's the first and has a content we would like to view and also, anonymous FTP login allowed.
@@ -13,7 +13,7 @@ We go ahead to check out what ftp has for us. For that we use <ftp IP> and then 
 ![image](https://github.com/Bangis041/academy-/assets/74382096/d07f7c83-9256-4046-a6b6-6cf56a21cb1e)
 
 
-Here we downloaded the note.txt file using <get file-name> and then I viewed it on my attaker's machine. From the note.txt, we found out Grimmie was was a user and dev who uses same passwords everwhere hehe😂 and we also found an SQL database where we saw the student RegNo, passwords and all other things that can be used to login. It was also from 2020 and the message ws from jdelta.
+Here we downloaded the note.txt file using <get file-name> and then I viewed it on my attaker's machine. From the note.txt, we found out Grimmie was was a user and dev who uses same passwords everwhere hehe😂 and we also found a SQL database where we saw the student RegNo, passwords and all other things that can be used to login. It was also from 2020 and the message ws from jdelta.
 
 After that we check outh the next port that might matter to us. SSH is not it so we move down to port 80.
 Just paste the IP on your browser and check round for any useful information. After loading the website, there was no much information. we only knew what technology was behind it.
