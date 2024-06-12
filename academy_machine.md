@@ -31,5 +31,11 @@ i copied and pasted in a .sh file i named linpeas. Now i have to transfer the fi
 We were given what to look out for also...made work easier. While scrolling through, I was able to get this...* * * * * /home/grimmie/backup.sh and also this 👇
 ![image](https://github.com/Bangis041/academy-/assets/74382096/a4edae2d-e509-426d-990c-a40d80c03c68) and also a password that kept repeating itself in multiple instances. I think now is time i use port 22 which is SSH since we have confirmed that Grimmie is a user and we have a possible password. SYNTAX for SSH: <ssh user@IP> and guess what again guys...I'm in🥱. 
 ![image](https://github.com/Bangis041/academy-/assets/74382096/481ae434-82a8-40db-bdd9-f84eac966f9d)
+Now it's looking like it's a dead end after trying sudo -l. I checked the content of backupsh and realised it supposed to run at some point. Crontabs did not work so i used ps aux to list processes and we can see it is running as root user. Maybe we are correct.
+![image](https://github.com/Bangis041/academy-/assets/74382096/94de302c-2c28-410a-b51c-a7f04ad8f0ee). 
+
+From hree, we head over to google.com as it is out best friend to ask it asbout "bash reverse shell one liner" and we see a link on pentestmonkey. We get a command to use to get a shell...Let's try it and see what comes.
+
+![image](https://github.com/Bangis041/academy-/assets/74382096/319e4683-a49a-43a1-82a7-01a53a3994f6)
 
 
