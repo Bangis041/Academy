@@ -1,4 +1,7 @@
 This machine is one of the first machines i got root access to. It was really fun and this is going to be like a walkthrough o it.
 Advice to beginners just like me, I won't advise you follow this walkthrough back to back as it will really not help you progress well in your journey. You can just come here to check when you get stuck and have tried all possible things you know before.
 
-First we load our machine and get our IP address.
+First we load our machine and get our IP address. For that we use the command <ip a> and we copy our IP address. That will be the target IP. 
+
+
+We start by doing the normal, scanning for ports to see which ports are opened and vulnerable. For this, I did <nmap -A -p- IP>
