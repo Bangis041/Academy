@@ -2,12 +2,17 @@ This machine is one of the first machines i got root access to. It was really fu
 Advice to beginners just like me, I won't advise you follow this walkthrough back to back as it will really not help you progress well in your journey. You can just come here to check when you get stuck and have tried all possible things you know before.
 
 First we load our machine and get our IP address. For that we use the command <ip a> and we copy our IP address. That will be the target IP. 
+![image](https://github.com/Bangis041/academy-/assets/74382096/9c438e88-5791-4089-83fe-921446e9cc60)
 
 
 We start by doing the normal, scanning for ports to see which ports are opened and vulnerable. For this, I did <nmap -A -p- IP>
+![image](https://github.com/Bangis041/academy-/assets/74382096/3d764b7f-820c-41d3-b1d1-34811b658b62)
 
-From the scan, we can see we had a number of opened ports. Port 21, 22 and 80. Port 21 looked interesting since it's the first and has a content we would like to view and also, anonymous FTP login allowed.
+From the scan above, we can see we had a number of opened ports. Port 21, 22 and 80. Port 21 looked interesting since it's the first and has a content we would like to view and also, anonymous FTP login allowed.
 We go ahead to check out what ftp has for us. For that we use <ftp IP> and then we are able to list what files are there. FTP simply means file transfer protocol, it is used to download, upload, and transfer files from one location to another on the internet and between systems.
+![image](https://github.com/Bangis041/academy-/assets/74382096/d07f7c83-9256-4046-a6b6-6cf56a21cb1e)
+
+
 Here we downloaded the note.txt file using <get file-name> and then I viewed it on my attaker's machine. From the note.txt, we found out Grimmie was was a user and dev who uses same passwords everwhere hehe😂 and we also found an SQL database where we saw the student RegNo, passwords and all other things that can be used to login. It was also from 2020 and the message ws from jdelta.
 
 After that we check outh the next port that might matter to us. SSH is not it so we move down to port 80.
