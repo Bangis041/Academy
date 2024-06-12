@@ -34,8 +34,16 @@ We were given what to look out for also...made work easier. While scrolling thro
 Now it's looking like it's a dead end after trying sudo -l. I checked the content of backupsh and realised it supposed to run at some point. Crontabs did not work so i used ps aux to list processes and we can see it is running as root user. Maybe we are correct.
 ![image](https://github.com/Bangis041/academy-/assets/74382096/94de302c-2c28-410a-b51c-a7f04ad8f0ee). 
 
-From hree, we head over to google.com as it is out best friend to ask it asbout "bash reverse shell one liner" and we see a link on pentestmonkey. We get a command to use to get a shell...Let's try it and see what comes.
-
+From hree, we head over to google.com as it is out best friend to ask it asbout "bash reverse shell one liner" and we see a link on pentestmonkey. 
 ![image](https://github.com/Bangis041/academy-/assets/74382096/319e4683-a49a-43a1-82a7-01a53a3994f6)
 
+We get a command to use to get a shell...Let's try it and see what comes.
+![image](https://github.com/Bangis041/academy-/assets/74382096/17267a78-6af2-4561-85c6-37bd8fb39fd1).
+
+For this to work, we have to set up a listener on our machine and specify the port we are listening on. For me it is 5678. ![image](https://github.com/Bangis041/academy-/assets/74382096/198043da-f221-4a9a-b9eb-19b27c9805e3).
+We then wait for it to run, I waited for about 28seconds and I AM IN!!!!!
+
+![image](https://github.com/Bangis041/academy-/assets/74382096/5203fc05-b3bb-44bf-8590-abcfcb7113e3)
+Just find the flag and at it out. 
+![image](https://github.com/Bangis041/academy-/assets/74382096/b87492b2-0a0e-47d5-b436-275268df8453)
 
