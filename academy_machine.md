@@ -14,7 +14,7 @@ We start by scanning for ports to see which ports are opened and vulnerable. For
 
 From the scan above, we can see we had a number of opened ports. Port 21 looked interesting since it's the first and has a content we would like to view and also, anonymous FTP login allowed.
 
-For us to check that out, we use <ftp IP> and then we are able to list what files are there.
+For us to check that out, we use ```ftp IP``` and then we are able to list what files are there.
 
 ![image](https://github.com/Bangis041/academy-/assets/74382096/d07f7c83-9256-4046-a6b6-6cf56a21cb1e)
 
@@ -26,11 +26,11 @@ After loading the website, there was no much information. we only knew what tech
 
 ![image](https://github.com/Bangis041/academy-/assets/74382096/53b38ac7-4519-4202-90c5-ca4b81d25de3)
 
-Here we proceed to using a directory buster. I will be using gobuster in this case. SYNTAX: <gobuster dir -u http://IP -w wordlist_file/path>.
+Here we proceed to using a directory buster. I will be using gobuster in this case. SYNTAX: ```gobuster dir -u http://IP -w wordlist_file/path```.
 
 ![image](https://github.com/Bangis041/academy-/assets/74382096/bdcf9185-6b31-4618-b9a2-1d6e827a3332)
 
-Afer scanning we were able to get two directories. One interests me more and that is /academy. Why? I saw something that has to do with student in the note.txt file we saw from FTP. Now we search for http://IP/academy. After loading, we get to see a login page that requires us to use a REG NO and password. I did that using the information from the note.txt and i got an error
+Afer scanning we were able to get two directories. One interests me more and that is ```/academy```. Why? I saw something that has to do with student in the note.txt file we saw from FTP. Now we search for http://IP/academy. After loading, we get to see a login page that requires us to use a REG NO and password. I did that using the information from the note.txt and i got an error
 
 ![image](https://github.com/Bangis041/academy-/assets/74382096/3282bcab-4f23-4414-895c-ded129a73056)
 
@@ -50,13 +50,13 @@ Now is time to change the permission to make it executable and then run!!!.
 
 ![image](https://github.com/Bangis041/academy-/assets/74382096/269bb845-d796-4154-81b7-ddd10c3906ee)
 
-We were given what to look out for also...made work easier. While scrolling through, I was able to get this...* * * * * /home/grimmie/backup.sh and also this 👇
+We were given what to look out for also...made work easier. While scrolling through, I was able to get this...```* * * * * /home/grimmie/backup.sh``` and also this 👇
 
-![image](https://github.com/Bangis041/academy-/assets/74382096/a4edae2d-e509-426d-990c-a40d80c03c68) and also a password that kept repeating itself in multiple instances. I think now is time i use port 22 which is SSH since we have confirmed that Grimmie is a user and we have a possible password. SYNTAX for SSH: <ssh user@IP> and guess what again guys...I'm in🥱. 
+![image](https://github.com/Bangis041/academy-/assets/74382096/a4edae2d-e509-426d-990c-a40d80c03c68) and also a password that kept repeating itself in multiple instances. I think now is time i use port 22 which is SSH since we have confirmed that Grimmie is a user and we have a possible password. SYNTAX for SSH: ```ssh user@IP``` and guess what again guys...I'm in🥱. 
 
 ![image](https://github.com/Bangis041/academy-/assets/74382096/481ae434-82a8-40db-bdd9-f84eac966f9d)
 
-Now it's looking like it's a dead end after trying sudo -l. I checked the content of backup.sh and realised it's supposed to run at some point. Crontabs did not work so i used ps aux to list processes and we can see it is running as root user. Maybe we are correct.
+Now it's looking like it's a dead end after trying ```sudo -l```. I checked the content of backup.sh and realised it's supposed to run at some point. Crontabs did not work so i used ps aux to list processes and we can see it is running as root user. Maybe we are correct.
 
 ![image](https://github.com/Bangis041/academy-/assets/74382096/94de302c-2c28-410a-b51c-a7f04ad8f0ee). 
 
