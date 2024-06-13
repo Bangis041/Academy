@@ -1,4 +1,4 @@
-#ACADEMY
+# ACADEMY
 
 It was gottem as I was studying the practical ethical hacking course on TCM ACADEMY. This writeup will be a walkthrough on it. I ran it on a virtual machine to get the IP of the machie.
 
@@ -8,7 +8,7 @@ First we load our machine and get our IP address. For that we use the command <i
 
 ![image](https://github.com/Bangis041/academy-/assets/74382096/9c438e88-5791-4089-83fe-921446e9cc60)
 
-We start by scanning for ports to see which ports are opened and vulnerable. For this, I did a nmap scan with SYNTAX: <nmap -A -p- IP>
+We start by scanning for ports to see which ports are opened and vulnerable. For this, I did a nmap scan with SYNTAX: ```nmap -A -p- IP```
 
 ![image](https://github.com/Bangis041/academy-/assets/74382096/3d764b7f-820c-41d3-b1d1-34811b658b62)
 
