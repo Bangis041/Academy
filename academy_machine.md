@@ -4,7 +4,7 @@ It was gotten as I was studying the practical ethical hacking course on TCM ACAD
 
 Advice to beginners just like me, I won't advise you follow this walkthrough back to back as it will not really help you progress well in your journey. You can just come here to check when you get stuck and have tried all possible things you know before.
 
-First we load our machine and get our IP address. For that we use the command <ip a> and we copy our IP address. That will be the target IP. 
+First we load our machine and get our IP address. For that we use the command ```ip a``` and we copy our IP address. That will be the target IP. 
 
 ![image](https://github.com/Bangis041/academy-/assets/74382096/9c438e88-5791-4089-83fe-921446e9cc60)
 
