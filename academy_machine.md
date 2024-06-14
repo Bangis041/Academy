@@ -12,7 +12,7 @@ We start by scanning for ports to see which ports are opened and vulnerable. For
 
 ![image](https://github.com/Bangis041/academy-/assets/74382096/3d764b7f-820c-41d3-b1d1-34811b658b62)
 
-From the scan above, we can see we had a number of opened ports. Port 21 looked interesting since it's the first and has a content we would like to view and also, anonymous FTP login allowed.
+From the scan above, we can see we had a number of opened ports. Port 21 looked interesting since it's the first and had some content we would like to view.
 
 For us to check that out, we use ```ftp IP``` and then we are able to list what files are there.
 
@@ -38,7 +38,7 @@ so i looked at the password again and realized it was not a password but a hash.
 
 ![image](https://github.com/Bangis041/academy-/assets/74382096/64a793e0-cdc9-4e1b-8199-4617a0b93152)
 
-After getting in, the only interesting thing here was that there was a place to upload images. Good news is that not only images an be uploaded there, .php files could also be uploaded. I used that to my advantage to get a reverse shell. I simply searched on google fpr php reverse shell. I copied the code into a file, activated a listener and uploaded the file and I WAS IN ONCE AGAIN😂. It was almost a dead end so i used an automation tool i learned about on https://tryhackme.com/r/room/linprivesc. Just search 'linpeas' on google. I found the script, 
+After getting in, the only interesting thing here was that there was a place to upload images. Good news is that not only images can be uploaded there, .php files could also be uploaded. I used that to my advantage to get a reverse shell. I simply searched on google fpr php reverse shell. I copied the code into a file, activated a listener and uploaded the file and I WAS IN ONCE AGAIN😂. It was almost a dead end so i used an automation tool i learned about on https://tryhackme.com/r/room/linprivesc. Just search 'linpeas' on google. I found the script, 
 
 ![image](https://github.com/Bangis041/academy-/assets/74382096/2437bec1-dff5-49ae-9557-dd9d001422cb)
 
@@ -56,7 +56,7 @@ We were given what to look out for also...made work easier. While scrolling thro
 
 ![image](https://github.com/Bangis041/academy-/assets/74382096/481ae434-82a8-40db-bdd9-f84eac966f9d)
 
-Now it's looking like it's a dead end after trying ```sudo -l```. I checked the content of backup.sh and realised it's supposed to run at some point. Crontabs did not work so i used ps aux to list processes and we can see it is running as root user. Maybe we are correct.
+Now it's looking like it's a dead end after trying ```sudo -l```. I checked the content of backup.sh and realised it's supposed to run at some point. Crontabs did not work so i used ps aux to list processes and we can see it is running as root user.
 
 ![image](https://github.com/Bangis041/academy-/assets/74382096/94de302c-2c28-410a-b51c-a7f04ad8f0ee). 
 
@@ -76,7 +76,7 @@ We then wait for it to run, I waited for about 28seconds and I AM IN!!!!!
 
 ![image](https://github.com/Bangis041/academy-/assets/74382096/5203fc05-b3bb-44bf-8590-abcfcb7113e3)
 
-Just find the flag and at it out. 
+Just find the flag and cat it out. 
 
 ![image](https://github.com/Bangis041/academy-/assets/74382096/b87492b2-0a0e-47d5-b436-275268df8453)
 
